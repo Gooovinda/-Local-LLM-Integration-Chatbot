@@ -1,4 +1,4 @@
-**Text Similarity API with FastAPI**
+** Text Similarity API with FastAPI **
 
 A REST API built with FastAPI that measures similarity between two text inputs. Using TF-IDF vectorization and cosine similarity, it returns a score that reflects how closely the texts are related.
 
