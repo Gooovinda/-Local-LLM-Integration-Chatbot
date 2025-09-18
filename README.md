@@ -1,60 +1,32 @@
-** Text Similarity API with FastAPI **
+# 🤖 **Text Similarity API with FastAPI**
 
-A REST API built with FastAPI that measures similarity between two text inputs. Using TF-IDF vectorization and cosine similarity, it returns a score that reflects how closely the texts are related.
+**📌 Objective**  
+I created a lightweight REST API that computes similarity between two text inputs. The API uses TF-IDF vectorization and cosine similarity to return a numeric similarity score suitable for integration with search, validation, or recommendation systems.
 
-📌**Objective**
-Develop an API that allows users to send two text inputs and receive an instant similarity score.
+**🚀 Key Highlights**  
+- 🧠 **TF-IDF + Cosine Similarity**: Robust and fast method for text similarity.  
+- 🚀 **FastAPI Backend**: High-performance REST API endpoint for easy integration.  
+- 🖥 **JSON Response**: Clean output structure for applications to consume.  
+- 🔧 **Reusable Service**: Can be extended into chatbots, search, or content-matching systems.
 
-🚀 **Key Highlights**
+**📊 Tech Stack**  
+- Python  
+- FastAPI  
+- Scikit-learn (TF-IDF Vectorizer, Cosine Similarity)  
+- Uvicorn (server)
 
-🧠 TF-IDF + Cosine Similarity: Computes similarity between two text strings.
+**📂 Dataset**  
+- No external dataset required — the API accepts user-provided texts.
 
-🚀 FastAPI Backend: Provides a high-performance REST API endpoint.
-
-🖥 JSON Response: Clean output, easy to integrate with other systems.
-
-🔧 Reusable Service: Can be extended to chatbots, search engines, or recommendation systems.
-
-📊 **Tech Stack**
-
-Python
-
-FastAPI
-
-Scikit-learn (TF-IDF Vectorizer, Cosine Similarity)
-
-Uvicorn (server)
-
-📂 Dataset
-
-No external dataset required.
-
-Input text comes from the user (via API request).
-
-🧪 Example Usage
+**🧪 Example Usage**  
 Request:
-
-POST /similarity  
-{  
-  "text1": "I love machine learning",  
-  "text2": "Machine learning is amazing"  
-}  
-
-
-Response:
-
-{  
-  "similarity_score": 0.87  
-}  
-
-
-📂 Project Structure
-
-├── main.py                # FastAPI app with similarity endpoint  
-├── requirements.txt       # Dependencies  
-└── README.md              # Project documentation  
-
-
+```json
+POST /similarity
+{
+  "text1": "I love machine learning",
+{
+  "similarity_score": 0.87
+}
 ⚡ How to Run the Project
 
 Clone the repository or download the ZIP file.
@@ -64,3 +36,5 @@ Install dependencies: pip install -r requirements.txt
 Start the API server: uvicorn main:app --reload
 
 Open http://127.0.0.1:8000/docs to test the API interactively.
+  "text2": "Machine learning is amazing"
+}
